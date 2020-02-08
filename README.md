@@ -1,4 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Backlog Basket is a web application written in JavaScript.
+
+### Built With
+* React
+* Node
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get the app working on your computer, follow the steps below.
+
+### Prerequisites
+
+* Git
+```sh
+git --version
+```
+
+### Installation
+
+1. Clone the repository
+```sh
+git clone https://github.com/jaychenblue/backlog-basket.git
+```
+2. Navigate to the folder
+```
+cd backlog-basket
+```
+3. Select the branch that you wish to work on
+```sh
+git branch -av
+git checkout branch-name-here
+```
+4. Pull the latest changes
+```sh
+git pull
+git pull origin master
+```
+
+<hr />
 
 ## Available Scripts
 
