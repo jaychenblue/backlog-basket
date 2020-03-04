@@ -4,7 +4,8 @@ class Game extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: 'Red Dead Redemption 2'
+      title: 'Red Dead Redemption 2',
+      platform: 'PS4'
     };
   }
 
@@ -12,6 +13,8 @@ class Game extends React.Component {
     return (
         <div>
             {this.state.title}
+            <br />
+            {this.state.platform}
             <br />
             <button type="button" class="btn btn-primary">
                 Oyy
