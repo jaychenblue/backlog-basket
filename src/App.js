@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+import TestButton from './TestButton.js';
 
 function App() {
   return (
-    <button type="button" class="btn btn-primary">
-      Click Me
-    </button>
+    <TestButton />
   );
 }
 
