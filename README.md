@@ -1,11 +1,19 @@
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# General Information
 
-Backlog Basket is a web application written in JavaScript.
+* Course: SOEN 357 - Winter 2020
 
-### Built With
-* React
-* Node
+* Category: Web application
+
+* Front end: React, Bootstrap
+
+### Team Members
+
+Name |
+--- |
+Jay Chen
+Leslie Poso
+Manpreet Sohal
 
 <!-- GETTING STARTED -->
 ## Getting Started
