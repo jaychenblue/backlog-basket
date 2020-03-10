@@ -5,7 +5,7 @@
 
 * Category: Web application
 
-* Front end: React, Bootstrap
+* Built with: React, Bootstrap
 
 ### Team Members
 
@@ -16,7 +16,7 @@ Leslie Poso
 Manpreet Sohal
 
 <!-- GETTING STARTED -->
-## Getting Started
+# Getting Started
 
 To get the app working on your computer, follow the steps below.
 
