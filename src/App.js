@@ -9,6 +9,8 @@ function App() {
       <h1 class="display-4">Welcome to the Backlog Basket</h1>
       <p class="lead">Organize your gaming backlog and wishlist here. Play more, discover more.</p>
     </div>
+    <Game />
+    <Game />
     </>
   );
 }
