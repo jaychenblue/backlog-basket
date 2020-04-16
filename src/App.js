@@ -1,10 +1,13 @@
 import React from 'react';
-import './App.css';
 import TestButton from './TestButton.js';
+import Game from './Game.js';
+import "./App.css";
 
 function App() {
   return (
-    <TestButton />
+    <>
+      <Game />
+    </>
   );
 }
 
