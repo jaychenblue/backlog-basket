@@ -5,7 +5,7 @@
 
 * Category: Web application
 
-* Built with: React, Bootstrap
+* Built with: React, Semantic UI
 
 ### Team Members
 
