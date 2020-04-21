@@ -1,46 +1,56 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
-// import {
-//   Card, CardImg, CardText, CardBody,
-//   CardTitle, CardSubtitle, Button, CardImgOverlay
-// } from 'reactstrap';
-
 import gta5 from "./img/gta5.jpg";
 import rdr2 from "./img/rdr2.jpg";
 
 class Game extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      title: "Red Dead Redemption 2",
-      platform: "PS4",
-      image1: "rdr2.jpg",
+      title: this.props.title,
+      image: this.props.image,
+      platform: this.props.platform,
+      status: this.props.status,
+      description: this.props.description
     };
   }
 
   render() {
+    const coverArt = require(`./img/${this.state.image}`);
+    var status, statusIcon;
+    switch (this.state.status) {
+      case "backlog":
+        status = "Saved in your backlog";
+        statusIcon = "thumbtack"
+        break;
+      default:
+        status = "Not in your library";
+        statusIcon = "plus"
+        break;
+    }
+
     return (
       <>
         <Card>
           <Image
-            src={gta5}
+            src={ coverArt }
             wrapped
             ui={false}
           />
           <Card.Content>
-            <Card.Header>Grand Theft Auto V</Card.Header>
+            <Card.Header>{this.state.title}</Card.Header>
             <Card.Meta>
-              <span className="date">Steam</span>
+              <span className="date">{this.state.platform}</span>
             </Card.Meta>
             <Card.Description>
-              Enter the lives of criminals as they risk everything in a series of dangerous heists.
+              {this.state.description}
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
             <a>
-              <Icon name="thumbtack" />
-              Saved in your backlog
+              <Icon name={statusIcon} />
+              {status}
             </a>
           </Card.Content>
         </Card>
