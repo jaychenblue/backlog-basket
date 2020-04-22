@@ -39,6 +39,11 @@ class Game extends React.Component {
     }
 
     if (this.state.status === "wishlist") {
+      if (this.state.nav === 1) {
+        return (
+          <h2>AYY</h2>
+        );
+      }
       return (
         <h1>1</h1>
       );
