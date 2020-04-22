@@ -9,7 +9,10 @@ class TopMenu extends React.Component {
     };
   }
 
-  handleMenuClick = (e, { name }) => this.setState({ activeItem: name });
+  handleMenuClick = (e, { name }) => {
+    this.setState({ activeItem: name });
+    this.props.handler(name);
+  }
 
   render() {
     return (
