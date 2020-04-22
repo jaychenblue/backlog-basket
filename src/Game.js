@@ -25,7 +25,7 @@ class Game extends React.Component {
         statusIcon = "thumbtack"
         break;
       default:
-        status = "Not in your library";
+        status = "Add to your wishlist";
         statusIcon = "plus"
         break;
     }
