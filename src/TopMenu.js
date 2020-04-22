@@ -35,12 +35,6 @@ class TopMenu extends React.Component {
       </Menu>
     );
   }
-
-  componentDidMount() {
-    this.setState({
-      someKey: 'otherValue'
-    });
-  }
 }
 
 export default TopMenu;

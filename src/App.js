@@ -13,29 +13,33 @@ class App extends React.Component {
     };
   }
 
+  cards = [
+    {'title': 'Grand Theft Auto V', 'id': 1}
+  ];
+
   handler = (val) => {
     if (val === 'wishlist') {
       this.setState({
         displayHome: false,
         displayWishlist: true,
-        displayLibrary: false
-      })
+        displayLibrary: false,
+      });
     } else if (val === 'library') {
       this.setState({
         displayHome: false,
         displayWishlist: false,
-        displayLibrary: true
+        displayLibrary: true,
       });
     } else {
       this.setState({
         displayHome: true,
         displayWishlist: false,
-        displayLibrary: false
-      })
+        displayLibrary: false,
+      });
     }
   };
 
-  render() {
+  header = () => {
     if (this.state.displayWishlist) {
       return (
         <>
@@ -73,7 +77,81 @@ class App extends React.Component {
           </div>
         </h2>
         <br />
-  
+        </>
+      );
+    }
+  }
+
+  showWishlist = () => {
+    if (this.state.displayWishlist) {
+      return (
+        <>
+        <div class="ui center aligned grid">
+          <div class="row">
+            <div class="three wide column">
+              <Game title="Grand Theft Auto V"
+                platform="Steam"
+                image="gta5.jpg"
+                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                status="wishlist"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Assassin's Creed Odyssey"
+                platform="Steam"
+                image="odyssey.jpg"
+                description="Write your own epic odyssey and become a legendary Spartan hero."
+                status="wishlist"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Sleeping Dogs"
+                platform="PS4"
+                image="sleeping_dogs.jpg"
+                description="Play as an undercover cop trying to take down the Triads from the inside out."
+                status="wishlist"
+              />
+            </div>
+          </div>
+        </div>
+        </>
+      );
+    }
+  }
+
+  showLibrary = () => {
+    if (this.state.displayLibrary) {
+      return (
+        <>
+        <div class="ui center aligned grid">
+          <div class="row">
+            <div class="three wide column">
+              <Game title="Pokémon: Let's Go, Eevee!"
+                platform="Switch"
+                image="eevee.jpg"
+                description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
+                status="backlog"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Mario Kart 8"
+                platform="Wii U"
+                image="mk8.png"
+                description="Hit the road as you race and battle against your friends!"
+                status="backlog"
+              />
+            </div>
+          </div>
+        </div>
+        </>
+      );
+    }
+  }
+
+  showHome = () => {
+    if (this.state.displayHome) {
+      return (
+        <>
         <div class="ui center aligned equal width grid">
           <div class="row">
             <div class="column">
@@ -81,6 +159,7 @@ class App extends React.Component {
                 platform="Steam"
                 image="gta5.jpg"
                 description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                status="wishlist"
               />
             </div>
             <div class="column">
@@ -102,6 +181,7 @@ class App extends React.Component {
                 platform="Steam"
                 image="odyssey.jpg"
                 description="Write your own epic odyssey and become a legendary Spartan hero."
+                status="wishlist"
               />
             </div>
             <div class="column">
@@ -109,6 +189,7 @@ class App extends React.Component {
                 platform="PS4"
                 image="sleeping_dogs.jpg"
                 description="Play as an undercover cop trying to take down the Triads from the inside out."
+                status="wishlist"
               />
             </div>
             <div class="column">
@@ -123,10 +204,15 @@ class App extends React.Component {
         </>
       );
     }
+  }
 
+  render() {
     return (
       <>
-        <TopMenu handler={this.handler} />
+      {this.header()}
+      {this.showHome()}
+      {this.showWishlist()}
+      {this.showLibrary()}
       </>
     );
   }
