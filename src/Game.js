@@ -9,8 +9,7 @@ class Game extends React.Component {
       image: this.props.image,
       platform: this.props.platform,
       status: this.props.status,
-      description: this.props.description,
-      nav: this.props.nav
+      description: this.props.description
     };
   }
 
@@ -25,11 +24,11 @@ class Game extends React.Component {
     var status, statusIcon;
     switch (this.state.status) {
       case "wishlist":
-        status = "Saved in your wishlist";
+        status = "Saved to your wishlist";
         statusIcon = "star"
         break;
       case "backlog":
-        status = "Saved in your backlog";
+        status = "In your backlog";
         statusIcon = "thumbtack"
         break;
       default:
@@ -38,52 +37,33 @@ class Game extends React.Component {
         break;
     }
 
-    if (this.state.status === "wishlist") {
-      if (this.state.nav === 1) {
-        return (
-          <h2>AYY</h2>
-        );
-      }
-      return (
-        <h1>1</h1>
-      );
-    } else if (this.state.status === "backlog") {
-      return <h1>Hullo!</h1>;
-    } else {
-      return (
-        <>
-          <Card>
-            <Image
-              src={ coverArt }
-              wrapped
-              ui={false}
-            />
-            <Card.Content>
-              <Card.Header>{this.state.title}</Card.Header>
-              <Card.Meta>
-                <span className="date">{this.state.platform}</span>
-              </Card.Meta>
-              <Card.Description>
-                {this.state.description}
-              </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-              {/* eslint-disable-next-line */}
-              <a onClick={this.handleClick}>
-                <Icon name={statusIcon} />
-                {status}
-              </a>
-            </Card.Content>
-          </Card>
-        </>
-      );
-    }    
-  }
-
-  componentDidMount() {
-    this.setState({
-      someKey: "otherValue",
-    });
+    return (
+      <>
+      <Card>
+        <Image
+          src={ coverArt }
+          wrapped
+          ui={false}
+        />
+        <Card.Content>
+          <Card.Header>{this.state.title}</Card.Header>
+          <Card.Meta>
+            <span className="date">{this.state.platform}</span>
+          </Card.Meta>
+          <Card.Description>
+            {this.state.description}
+          </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          {/* eslint-disable-next-line */}
+          <a onClick={this.handleClick}>
+            <Icon name={statusIcon} />
+            {status}
+          </a>
+        </Card.Content>
+      </Card>
+      </>
+    );   
   }
 }
 
