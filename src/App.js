@@ -1,17 +1,27 @@
 import React from 'react';
 import Game from './Game.js';
+import TopMenu from './TopMenu.js';
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div class="ui grid">
-        <div class="row center aligned">
+      <TopMenu />
+
+      <h2 class="ui horizontal divider header">
+        <i class="bullhorn icon"></i>
+        <div class="content">
+          Featured &amp; Recommended
+        </div>
+      </h2>
+      <br />
+
+      <div class="ui center aligned grid">
+        <div class="row">
           <div class="three wide column">
             <Game title="Grand Theft Auto V"
               platform="Steam"
               image="gta5.jpg"
-              status="backlog"
               description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
             />
           </div>
@@ -47,20 +57,21 @@ function App() {
       </div>
 
       <br />
-      <h3 class="ui horizontal divider header">
+      <h2 class="ui horizontal divider header">
         <i class="gamepad icon"></i>
         <div class="content">
           My Library
         </div>
-      </h3>
+      </h2>
       <br />
 
-      <div class="ui grid">
-        <div class="row center aligned">
+      <div class="ui center aligned grid">
+        <div class="row">
           <div class="three wide column">
             <Game title="Mario Kart 8"
               platform="Wii U"
               image="mk8.png"
+              status="backlog"
               description="Hit the road as you race and battle against your friends!"
             />
           </div>
