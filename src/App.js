@@ -13,13 +13,19 @@ class App extends React.Component {
     };
   }
 
+  nav = () => {
+    if (this.state.displayWishlist) return 1;
+    if (this.state.displayLibrary) return 2;
+    return 0;
+  }
+
   handler = (val) => {
     if (val === 'wishlist') {
       this.setState({
         displayHome: false,
         displayWishlist: true,
         displayLibrary: false
-      })
+      });
     } else if (val === 'library') {
       this.setState({
         displayHome: false,
@@ -31,7 +37,7 @@ class App extends React.Component {
         displayHome: true,
         displayWishlist: false,
         displayLibrary: false
-      })
+      });
     }
   };
 
@@ -47,6 +53,53 @@ class App extends React.Component {
           </div>
         </h2>
         <br />
+        <div class="ui center aligned equal width grid">
+          <div class="row">
+            <div class="column">
+              <Game title="Grand Theft Auto V"
+                platform="Steam"
+                image="gta5.jpg"
+                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                nav={this.nav}
+              />
+            </div>
+            <div class="column">
+              <Game title="Red Dead Redemption 2"
+                platform="PS4"
+                image="rdr2.jpg"
+                description="Rob, steal and fight your way across the rugged heartland of America."
+              />
+            </div>
+            <div class="column">
+              <Game title="Pokémon: Let's Go, Eevee!"
+                platform="Switch"
+                image="eevee.jpg"
+                description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
+              />
+            </div>
+            <div class="column">
+              <Game title="Assassin's Creed Odyssey"
+                platform="Steam"
+                image="odyssey.jpg"
+                description="Write your own epic odyssey and become a legendary Spartan hero."
+              />
+            </div>
+            <div class="column">
+              <Game title="Sleeping Dogs"
+                platform="PS4"
+                image="sleeping_dogs.jpg"
+                description="Play as an undercover cop trying to take down the Triads from the inside out."
+              />
+            </div>
+            <div class="column">
+              <Game title="Mario Kart 8"
+                platform="Wii U"
+                image="mk8.png"
+                description="Hit the road as you race and battle against your friends!"
+              />
+            </div>
+          </div>
+        </div>
         </>
       );
     } else if (this.state.displayLibrary) {
@@ -60,6 +113,53 @@ class App extends React.Component {
           </div>
         </h2>
         <br />
+        <div class="ui center aligned equal width grid">
+          <div class="row">
+            <div class="column">
+              <Game title="Grand Theft Auto V"
+                platform="Steam"
+                image="gta5.jpg"
+                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                nav={this.nav}
+              />
+            </div>
+            <div class="column">
+              <Game title="Red Dead Redemption 2"
+                platform="PS4"
+                image="rdr2.jpg"
+                description="Rob, steal and fight your way across the rugged heartland of America."
+              />
+            </div>
+            <div class="column">
+              <Game title="Pokémon: Let's Go, Eevee!"
+                platform="Switch"
+                image="eevee.jpg"
+                description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
+              />
+            </div>
+            <div class="column">
+              <Game title="Assassin's Creed Odyssey"
+                platform="Steam"
+                image="odyssey.jpg"
+                description="Write your own epic odyssey and become a legendary Spartan hero."
+              />
+            </div>
+            <div class="column">
+              <Game title="Sleeping Dogs"
+                platform="PS4"
+                image="sleeping_dogs.jpg"
+                description="Play as an undercover cop trying to take down the Triads from the inside out."
+              />
+            </div>
+            <div class="column">
+              <Game title="Mario Kart 8"
+                platform="Wii U"
+                image="mk8.png"
+                description="Hit the road as you race and battle against your friends!"
+              />
+            </div>
+          </div>
+        </div>
         </>
       );
     } else {
@@ -81,6 +181,7 @@ class App extends React.Component {
                 platform="Steam"
                 image="gta5.jpg"
                 description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                nav={this.nav}
               />
             </div>
             <div class="column">
@@ -124,11 +225,11 @@ class App extends React.Component {
       );
     }
 
-    return (
-      <>
-        <TopMenu handler={this.handler} />
-      </>
-    );
+    // return (
+    //   <>
+    //     <TopMenu handler={this.handler} />
+    //   </>
+    // );
   }
 }
 
