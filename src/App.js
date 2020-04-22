@@ -60,7 +60,7 @@ class App extends React.Component {
         <h2 class="ui horizontal divider header">
           <i class="gamepad icon"></i>
           <div class="content">
-            My Library
+            My Games
           </div>
         </h2>
         <br />
@@ -91,7 +91,7 @@ class App extends React.Component {
             <div class="three wide column">
               <Game title="Grand Theft Auto V"
                 platform="Steam"
-                image="gta5.jpg"
+                image="origins.jpg"
                 description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
                 status="wishlist"
               />
@@ -99,7 +99,7 @@ class App extends React.Component {
             <div class="three wide column">
               <Game title="Assassin's Creed Odyssey"
                 platform="Steam"
-                image="odyssey.jpg"
+                image="2k20.jpg"
                 description="Write your own epic odyssey and become a legendary Spartan hero."
                 status="wishlist"
               />
@@ -128,9 +128,9 @@ class App extends React.Component {
             <div class="three wide column">
               <Game title="Pokémon: Let's Go, Eevee!"
                 platform="Switch"
-                image="eevee.jpg"
+                image="grey_eevee.jpg"
                 description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
-                status="backlog"
+                status="completed"
               />
             </div>
             <div class="three wide column">
@@ -138,6 +138,22 @@ class App extends React.Component {
                 platform="Wii U"
                 image="mk8.png"
                 description="Hit the road as you race and battle against your friends!"
+                status="backlog"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Grand Theft Auto V"
+                platform="Steam"
+                image="grey_gta5.jpg"
+                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                status="completed"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Red Dead Redemption 2"
+                platform="PS4"
+                image="rdr2.jpg"
+                description="Rob, steal and fight your way across the rugged heartland of America."
                 status="backlog"
               />
             </div>
@@ -155,24 +171,23 @@ class App extends React.Component {
         <div class="ui center aligned equal width grid">
           <div class="row">
             <div class="column">
-              <Game title="Grand Theft Auto V"
+              <Game title="NBA 2K20"
                 platform="Steam"
-                image="gta5.jpg"
+                image="2k20.jpg"
                 description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
-                status="wishlist"
               />
             </div>
             <div class="column">
-              <Game title="Red Dead Redemption 2"
+              <Game title="The Witcher 3: Wild Hunt"
                 platform="PS4"
-                image="rdr2.jpg"
+                image="tw3.jpg"
                 description="Rob, steal and fight your way across the rugged heartland of America."
               />
             </div>
             <div class="column">
-              <Game title="Pokémon: Let's Go, Eevee!"
-                platform="Switch"
-                image="eevee.jpg"
+              <Game title="Shadow of the Tomb Raider"
+                platform="Xbox One"
+                image="sotr.jpg"
                 description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
               />
             </div>
@@ -193,9 +208,55 @@ class App extends React.Component {
               />
             </div>
             <div class="column">
-              <Game title="Mario Kart 8"
-                platform="Wii U"
-                image="mk8.png"
+              <Game title="Far Cry 5"
+                platform="Uplay"
+                image="fc5.jpg"
+                description="Hit the road as you race and battle against your friends!"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="ui center aligned equal width grid">
+          <div class="row">
+            <div class="column">
+              <Game title="Grand Theft Auto V"
+                platform="Steam"
+                image="sekiro.jpg"
+                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+              />
+            </div>
+            <div class="column">
+              <Game title="Assassin's Creed Origins"
+                platform="PS4"
+                image="origins.jpg"
+                description="Rob, steal and fight your way across the rugged heartland of America."
+              />
+            </div>
+            <div class="column">
+              <Game title="Far Cry Primal"
+                platform="Uplay"
+                image="primal.jpg"
+                description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
+              />
+            </div>
+            <div class="column">
+              <Game title="Call of Duty: Modern Warfare 2"
+                platform="Steam"
+                image="mw2.jpg"
+                description="Write your own epic odyssey and become a legendary Spartan hero."
+              />
+            </div>
+            <div class="column">
+              <Game title="Resident Evil 2"
+                platform="PS4"
+                image="re2.jpg"
+                description="Play as an undercover cop trying to take down the Triads from the inside out."
+              />
+            </div>
+            <div class="column">
+              <Game title="Pokémon X"
+                platform="3DS"
+                image="x.jpg"
                 description="Hit the road as you race and battle against your friends!"
               />
             </div>

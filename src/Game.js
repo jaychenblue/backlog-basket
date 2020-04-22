@@ -14,9 +14,23 @@ class Game extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({
-      status: "wishlist"
-    });
+    if (this.state.status === "backlog") {
+      this.setState({
+        status: "completed"
+      })
+    } else if (this.state.status === "wishlist") {
+      this.setState({
+        status: "backlog"
+      })
+    } else if (this.state.status === "completed") {
+      this.setState({
+        status: "backlog"
+      })
+    } else {
+      this.setState({
+        status: "wishlist"
+      });
+    }
   }
 
   render() {
@@ -25,15 +39,19 @@ class Game extends React.Component {
     switch (this.state.status) {
       case "wishlist":
         status = "Saved to your wishlist";
-        statusIcon = "star"
+        statusIcon = "star";
         break;
       case "backlog":
         status = "In your backlog";
-        statusIcon = "thumbtack"
+        statusIcon = "thumbtack";
+        break;
+      case "completed":
+        status = "Completed";
+        statusIcon = "checkmark";
         break;
       default:
         status = "Add to your wishlist";
-        statusIcon = "plus"
+        statusIcon = "plus";
         break;
     }
 
