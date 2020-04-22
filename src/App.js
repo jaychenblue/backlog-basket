@@ -60,7 +60,7 @@ class App extends React.Component {
         <h2 class="ui horizontal divider header">
           <i class="gamepad icon"></i>
           <div class="content">
-            My Library
+            My Games
           </div>
         </h2>
         <br />
@@ -89,18 +89,18 @@ class App extends React.Component {
         <div class="ui center aligned grid">
           <div class="row">
             <div class="three wide column">
-              <Game title="Grand Theft Auto V"
-                platform="Steam"
-                image="gta5.jpg"
-                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+              <Game title="Assassin's Creed Origins"
+                platform="PS4"
+                image="origins.jpg"
+                description="Ancient Egypt is disappearing in a ruthless fight for power."
                 status="wishlist"
               />
             </div>
             <div class="three wide column">
-              <Game title="Assassin's Creed Odyssey"
+              <Game title="NBA 2K20"
                 platform="Steam"
-                image="odyssey.jpg"
-                description="Write your own epic odyssey and become a legendary Spartan hero."
+                image="2k20.jpg"
+                description="2K continues to redefine what’s possible in sports gaming with NBA 2K20."
                 status="wishlist"
               />
             </div>
@@ -128,9 +128,9 @@ class App extends React.Component {
             <div class="three wide column">
               <Game title="Pokémon: Let's Go, Eevee!"
                 platform="Switch"
-                image="eevee.jpg"
+                image="grey_eevee.jpg"
                 description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
-                status="backlog"
+                status="completed"
               />
             </div>
             <div class="three wide column">
@@ -138,6 +138,22 @@ class App extends React.Component {
                 platform="Wii U"
                 image="mk8.png"
                 description="Hit the road as you race and battle against your friends!"
+                status="backlog"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Grand Theft Auto V"
+                platform="Steam"
+                image="grey_gta5.jpg"
+                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                status="completed"
+              />
+            </div>
+            <div class="three wide column">
+              <Game title="Red Dead Redemption 2"
+                platform="PS4"
+                image="rdr2.jpg"
+                description="Rob, steal and fight your way across the rugged heartland of America."
                 status="backlog"
               />
             </div>
@@ -155,25 +171,25 @@ class App extends React.Component {
         <div class="ui center aligned equal width grid">
           <div class="row">
             <div class="column">
-              <Game title="Grand Theft Auto V"
+              <Game title="NBA 2K20"
                 platform="Steam"
-                image="gta5.jpg"
-                description="Enter the lives of criminals as they risk everything in a series of dangerous heists."
+                image="2k20.jpg"
+                description="2K continues to redefine what’s possible in sports gaming with NBA 2K20."
                 status="wishlist"
               />
             </div>
             <div class="column">
-              <Game title="Red Dead Redemption 2"
+              <Game title="The Witcher 3: Wild Hunt"
                 platform="PS4"
-                image="rdr2.jpg"
-                description="Rob, steal and fight your way across the rugged heartland of America."
+                image="tw3.jpg"
+                description="In The Witcher, you play as a professional monster hunter, Geralt of Rivia."
               />
             </div>
             <div class="column">
-              <Game title="Pokémon: Let's Go, Eevee!"
-                platform="Switch"
-                image="eevee.jpg"
-                description="Take a Pokémon journey to the Kanto region with your energetic partner, Eevee!"
+              <Game title="Shadow of the Tomb Raider"
+                platform="Xbox One"
+                image="sotr.jpg"
+                description="Join Lara as she races to save the world from a Mayan apocalypse."
               />
             </div>
             <div class="column">
@@ -181,7 +197,6 @@ class App extends React.Component {
                 platform="Steam"
                 image="odyssey.jpg"
                 description="Write your own epic odyssey and become a legendary Spartan hero."
-                status="wishlist"
               />
             </div>
             <div class="column">
@@ -193,10 +208,57 @@ class App extends React.Component {
               />
             </div>
             <div class="column">
-              <Game title="Mario Kart 8"
-                platform="Wii U"
-                image="mk8.png"
-                description="Hit the road as you race and battle against your friends!"
+              <Game title="Far Cry 5"
+                platform="Uplay"
+                image="fc5.jpg"
+                description="Hope County, Montana, has been overrun by a fanatical doomsday cult."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="ui center aligned equal width grid">
+          <div class="row">
+            <div class="column">
+              <Game title="Sekiro Shadows Twice"
+                platform="Steam"
+                image="sekiro.jpg"
+                description="Take Revenge. Restore Your Honor. Kill Ingeniously."
+              />
+            </div>
+            <div class="column">
+              <Game title="Assassin's Creed Origins"
+                platform="PS4"
+                image="origins.jpg"
+                description="Ancient Egypt is disappearing in a ruthless fight for power."
+                status="wishlist"
+              />
+            </div>
+            <div class="column">
+              <Game title="Far Cry Primal"
+                platform="Uplay"
+                image="primal.jpg"
+                description="As the last survivor, you will have to rise above extinction and unite your tribe."
+              />
+            </div>
+            <div class="column">
+              <Game title="Call of Duty: Modern Warfare 2"
+                platform="Steam"
+                image="mw2.jpg"
+                description="Face off against a new threat hellbent on bringing the world to the brink of collapse."
+              />
+            </div>
+            <div class="column">
+              <Game title="Resident Evil 2"
+                platform="PS4"
+                image="re2.jpg"
+                description="A deadly virus plunges the city into chaos as flesh eating zombies roam the streets."
+              />
+            </div>
+            <div class="column">
+              <Game title="Pokémon X"
+                platform="3DS"
+                image="x.jpg"
+                description="Embark on an epic adventure in the expansive Kalos region."
               />
             </div>
           </div>
